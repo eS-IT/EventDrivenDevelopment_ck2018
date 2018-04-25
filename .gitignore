@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.buildpath
+.project
+.settings/
+.build/
+.idea/
+nbproject/
+
+# project
+01_Documents/eventdispatcher.md
+01_Documents/eventdispatcher_code.md

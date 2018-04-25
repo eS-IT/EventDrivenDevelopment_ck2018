@@ -1,0 +1,56 @@
+# .gitignore by e@sy Solutions IT
+# ===============================
+# author      pfroch <info@easySolutionsIT.de>
+# link        http://easySolutionsIT.de
+# copyright   e@sy Solutions IT 2018
+# license     EULA
+# package     ck2018
+# filesource  .gitignore
+# version     1.0.0
+# since       25.04.18 - 15:27
+
+# ====================
+# Verzeichnis: TL_ROOT
+# ====================
+/*
+
+# TL_ROOT-Whitelist
+# ---------------
+!/.gitignore
+
+
+# ==================
+# Verzeichnis: files
+# ==================
+!/files/
+/files/*
+
+# Files-Whitelist
+# ---------------
+#!/files/AutoBackupDB/
+
+
+# ===================
+# Verzeichnis: System
+# ===================
+!/system/
+/system/*
+!/system/modules/
+/system/modules/*
+
+# Modul-Whitelist
+# ---------------
+!/system/modules/GreetingEvent/
+!/system/modules/GreetingEvent/*
+
+
+
+# =====================
+# Verzeichnis: template
+# =====================
+!/templates/
+/templates/*
+
+# Files-Whitelist
+# ---------------
+#!/templates/ORDNER/
