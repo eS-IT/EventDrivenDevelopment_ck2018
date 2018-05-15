@@ -29,11 +29,18 @@ $strNamespace   = 'Esit\\' . $strFolder;
   */
  ClassLoader::addClasses(array
  (
-    // Classes
+    // Events
     $strNamespace . '\Classes\Contao\Elements\ContentGreeting'  => "system/modules/$strFolder/Classes/Contao/Elements/ContentGreeting.php",
     $strNamespace . '\Classes\Events\OnGreetingEvent'           => "system/modules/$strFolder/Classes/Events/OnGreetingEvent.php",
     $strNamespace . '\Classes\Helper\EventHelper'               => "system/modules/$strFolder/Classes/Helper/EventHelper.php",
-    $strNamespace . '\Classes\Listener\OnGreetingListener'      => "system/modules/$strFolder/Classes/Listener/OnGreetingListener.php"
+    $strNamespace . '\Classes\Listener\OnGreetingListener'      => "system/modules/$strFolder/Classes/Listener/OnGreetingListener.php",
+    $strNamespace . '\Classes\Listener\OnGreetingListenerTwo'   => "system/modules/$strFolder/Classes/Listener/OnGreetingListenerTwo.php",
+
+    // Callbacks
+    $strNamespace . '\Classes\Contao\Hooks\MyHook'              => "system/modules/$strFolder/Classes/Contao/Hooks/MyHook.php",
+
+    // Hooks
+    $strNamespace . '\Classes\Contao\Callbacks\MyCallback'      => "system/modules/$strFolder/Classes/Contao/Callbacks/MyCallback.php"
  ));
 
  /**

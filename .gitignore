@@ -11,5 +11,6 @@ Thumbs.db
 nbproject/
 
 # project
+00_*/*
 01_Documents/eventdispatcher.md
 01_Documents/eventdispatcher_code.md

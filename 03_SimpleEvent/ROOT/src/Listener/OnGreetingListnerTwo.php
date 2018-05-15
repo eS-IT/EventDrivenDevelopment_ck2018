@@ -1,5 +1,5 @@
 <?php
-# ROOT/src/Listener/OnGreetingListner.php
+# 03_SimpleEvent/ROOT/src/Listener/OnGreetingListnerTwo.php
 namespace Esit\Listener;
 
 class OnGreetingListnerTwo

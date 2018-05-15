@@ -1,28 +1,9 @@
 <?php
-/**
- * @package     ck2018
- * @filesource  EventHelper.php
- * @version     1.0.0
- * @since       24.04.18 - 14:51
- * @author      Patrick Froch <info@easySolutionsIT.de>
- * @link        http://easySolutionsIT.de
- * @copyright   e@sy Solutions IT 2018
- * @license     EULA
- */
+# 04_Contao3/ROOT/system/modules/GreetingEvent/Classes/Helper/EventHelper.php
 namespace Esit\GreetingEvent\Classes\Helper;
 
-/**
- * Class EventHelper
- * @package Esit\GreetingEvent\Classes\Helper
- */
 class EventHelper
 {
-
-
-    /**
-     * @param $eventName
-     * @param $event
-     */
     public static function dispatch($eventName, $event)
     {
         $di             = new \Dice\Dice();

@@ -1,0 +1,14 @@
+ROOT/
+├── composer.json                       <-- dice muss hier eingetagen werden
+├── config
+│   └── events.php                      <-- Konfiguration der Event Lsitener
+└── src
+    ├── Content
+    │   └── EventCaller.php             <-- Aufrufende Klasse (beispielhaft)
+    ├── Events
+    │   └── OnGreetingEvent.php         <-- Event
+    ├── Helper
+    │   └── EventHelper.php             <-- Event Dispatcher
+    └── Listener
+        ├── OnGreetingListner.php       <-- 1. Event Listener
+        └── OnGreetingListnerTwo.php    <-- 2. Event Listener

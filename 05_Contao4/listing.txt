@@ -1,0 +1,32 @@
+ROOT/
+└── src/
+    └── Vendor
+        └── Package
+            ├── Classes
+            │   ├── Contao
+            │   │   └── Elements
+            │   │       └── ContentGreeting.php         <-- Inhaltselement
+            │   ├── ContaoManager
+            │   │   └── ContaoManagerPlugin.php         <-- ManagerPlugin
+            │   ├── Events
+            │   │   └── OnGreetingEvent.php             <-- Event
+            │   └── Listener
+            │       ├── OnGreetingListener.php          <-- Listener
+            │       └── OnGreetingListenerTwo.php       <-- 2. Listener
+            ├── DependencyInjection
+            │   └── VendorPackageExtension.php          <-- Laden der Listener
+            ├── Resources
+            │   ├── config
+            │   │   └── listener.yml                    <-- Konfiguration der Event Lsitener
+            │   └── contao
+            │       ├── config
+            │       │   └── config.php                  <-- config.php von Contao
+            │       ├── dca
+            │       │   └── tl_content.php              <-- DCA-Konfiguration für Feld das den Namen aufnimmt
+            │       ├── languages
+            │       │   └── de
+            │       │       ├── default.php             <-- Übersetzung des Inhaltselements
+            │       │       └── tl_content.php          <-- Übersetzung für das Feld das den Namen aufnimmt
+            │       └── templates
+            │           └── ce_greetings.html5          <-- Ausgabetemplate
+            └── VendorPackageBundle.php                 <-- Somfony-Bundle-Datei

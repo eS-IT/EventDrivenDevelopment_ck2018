@@ -1,71 +1,30 @@
 <?php
-/**
- * @package     ck2018
- * @filesource  OnGreetingEvent.php
- * @version     1.0.0
- * @since       24.04.18 - 14:46
- * @author      Patrick Froch <info@easySolutionsIT.de>
- * @link        http://easySolutionsIT.de
- * @copyright   e@sy Solutions IT 2018
- * @license     EULA
- */
+# 04_Contao3/ROOT/system/modules/GreetingEvent/Classes/Events/OnGreetingEvent.php
 namespace Esit\GreetingEvent\Classes\Events;
 
-/**
- * Class OnGreetingEvent
- * @package Esit\GreetingEvent\Classes\Events
- */
 class OnGreetingEvent
 {
+    const EVENTNAME     = 'greeting.event';
 
-    /**
-     * Names des Events
-     */
-    const EVENTNAME = 'OnGreetingEvent';
+    protected $name     = '';
 
-    /**
-     * Name der Person, die gegrüßt werden soll.
-     * @var string
-     */
-    protected $name = '';
+    protected $message  = '';
 
-    /**
-     * Fertige Grußbotschaft
-     * @var array
-     */
-    protected $message = '';
-
-
-    /**
-     * @return string
-     */
     public function getName()
     {
         return $this->name;
     }
 
-
-    /**
-     * @param $name
-     */
     public function setName($name)
     {
         $this->name = $name;
     }
 
-
-    /**
-     * @return array
-     */
     public function getMessage()
     {
         return $this->message;
     }
 
-
-    /**
-     * @param $message
-     */
     public function setMessage($message)
     {
         $this->message = $message;

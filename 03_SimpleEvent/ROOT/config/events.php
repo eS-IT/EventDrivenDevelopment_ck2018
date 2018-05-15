@@ -1,6 +1,6 @@
 <?php
-# ROOT/config/events.php
-$events['OnGreetingEvent'][1024] = ['Esit\Listener\OnGreetingListner', 'generateGreeting'];
-$events['OnGreetingEvent'][2048] = ['Esit\Listener\OnGreetingListnerTwo', 'modifyGreeting']; # new!
+# 03_SimpleEvent/ROOT/config/events.php
+$events['greeting.event'][1024] = ['Esit\Listener\OnGreetingListner', 'generateGreeting'];
+$events['greeting.event'][2048] = ['Esit\Listener\OnGreetingListnerTwo', 'modifyGreeting']; # new!
 
 return $events;

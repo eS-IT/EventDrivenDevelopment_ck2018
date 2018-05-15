@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "classmap": [
+            "src/Vendor/Package/Classes/ContaoManager/ContaoManagerPlugin.php"
+        ],
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}

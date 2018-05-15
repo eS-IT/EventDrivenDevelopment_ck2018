@@ -1,0 +1,16 @@
+@import url(../font/yanonekaffeesatz.css);
+@import url(../font/droidserif.css);
+@import url(../font/ubuntumono.css);
+
+body {
+    font-family: 'Droid Serif';
+}
+
+h1, h2, h3 {
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: normal;
+}
+
+.remark-code, .remark-inline-code {
+    font-family: 'Ubuntu Mono';
+}

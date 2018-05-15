@@ -1,5 +1,5 @@
 <?php
-# ROOT/src/Events/OnGreetingEvent.php
+# 03_SimpleEvent/ROOT/src/Events/OnGreetingEvent.php
 namespace Esit\Events;
 
 class OnGreetingEvent
@@ -7,7 +7,7 @@ class OnGreetingEvent
     /**
      * Names des Events
      */
-    const EVENTNAME = 'OnGreetingEvent';
+    const EVENTNAME = 'greeting.event';
 
     /**
      * Name der Person, die gegrüßt werden soll.
