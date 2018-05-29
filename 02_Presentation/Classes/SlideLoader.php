@@ -33,24 +33,4 @@ class SlideLoader
         $content = substr($content, 0, -5);
         return $content;
     }
-
-
-    /**
-     * Sucht die Templates im übergebenen Pfad.
-     * @param        $strPath
-     * @param string $strRgex
-     * @return array|\RegexIterator
-     */
-    protected static function getFiles($strPath, $strRgex = '/^.+\.md$/i')
-    {
-        if (is_dir($strPath)) {
-            $objDirectory   = new \RecursiveDirectoryIterator($strPath, \FilesystemIterator::SKIP_DOTS);
-            $objIterator    = new \RecursiveIteratorIterator($objDirectory);
-            $objFiles       = new \RegexIterator($objIterator, $strRgex, \RecursiveRegexIterator::GET_MATCH);
-
-            return $objFiles;
-        }
-
-        return array();
-    }
 }

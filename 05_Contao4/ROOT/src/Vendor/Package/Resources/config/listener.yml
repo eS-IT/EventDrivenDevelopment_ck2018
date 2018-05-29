@@ -5,13 +5,13 @@ services:
     ## ############# ##
 
     # OnGreetingListener
-    vendor_package_bundle.listener.greeting.listener.generateGreeting:
+    vendor_package_bundle.listener.greeting_listener.generate_greeting:
         class: Vendor\Package\Classes\Listener\OnGreetingListener
         arguments: []
         tags:
             - { name: kernel.event_listener, event: greeting.event, method: generateGreeting }
 
-    vendor_package_bundle.listener.greeting.listener.generateMessage:
+    vendor_package_bundle.listener.greeting_listener_two.generate_message:
         class: Vendor\Package\Classes\Listener\OnGreetingListenerTwo
         arguments: []
         tags:

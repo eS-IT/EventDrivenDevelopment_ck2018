@@ -5,9 +5,9 @@ namespace Esit\Events;
 class OnGreetingEvent
 {
     /**
-     * Names des Events
+     * Name des Events
      */
-    const EVENTNAME = 'greeting.event';
+    const NAME = 'greeting.event';
 
     /**
      * Name der Person, die gegrüßt werden soll.

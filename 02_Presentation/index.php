@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
+    <title>Contao Konferenz 2018</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="remark/css/main.css">
 </head>
 <body>
+<?php include_once 'Classes/SlideLoader.php'; ?>
 
 <textarea id="source">
-<?php include_once 'Classes/SlideLoader.php'; ?>
 <?php echo Esit\Classes\SlideLoader::loadSlides(); ?>
 </textarea>
 

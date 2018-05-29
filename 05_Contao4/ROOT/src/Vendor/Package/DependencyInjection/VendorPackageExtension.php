@@ -12,7 +12,7 @@ class VendorPackageExtension extends Extension
     // Lädt die Konfigurationsdateien des Bundles
     public function load(array $mergedConfig, ContainerBuilder $container)
     {
-        // Pfad zu den Konfigurationsdateien des Bandles erstellen.
+        // Pfad zu den Konfigurationsdateien des Bundles erstellen.
         $path = __DIR__.'/../Resources/config';
 
         // Erstellen des Loaders für das aktuelle Verzeichnis

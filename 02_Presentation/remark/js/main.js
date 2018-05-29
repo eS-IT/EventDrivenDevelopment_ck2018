@@ -7,4 +7,5 @@
  * @version     1.0.0
  * @since       25.04.18 - 16:20
  */
+
 var slideshow = remark.create();

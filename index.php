@@ -23,7 +23,7 @@
             <a href="04_Contao3/ROOT/index.php" target="_blank">Contao 3</a>
         </li>
         <li>
-            <a href="http://int.presentation.conference.cto4:8871/contao/login" target="_blank">Contao 4</a>
+            <a href="http://int.presentation.conference.cto4:8871/" target="_blank">Contao 4</a>
         </li>
     </ol>
 

@@ -1,5 +1,5 @@
 ROOT/
-├── composer.json                       <-- dice muss hier eingetagen werden
+├── composer.json                       <-- dice muss hier eingetragen werden
 ├── config
 │   └── events.php                      <-- Konfiguration der Event Lsitener
 └── src

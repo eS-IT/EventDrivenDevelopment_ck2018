@@ -12,11 +12,8 @@
 
 <h1>Contao Konferenz 2018</h1>
 
-<?php include_once 'config/autoload.php'; ?>
-
-<?php
-    \Esit\Content\EventCaller::callEvent();
-?>
+<?php include 'vendor/autoload.php'; ?>
+<?php \Esit\Content\EventCaller::callEvent(); ?>
 
 </body>
 </html>

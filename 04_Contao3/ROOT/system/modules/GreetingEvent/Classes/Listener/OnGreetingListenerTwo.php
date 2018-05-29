@@ -9,7 +9,7 @@ class OnGreetingListenerTwo
     public function generateMessage(OnGreetingEvent $greetingEvent)
     {
         $message    = $greetingEvent->getMessage();
-        $message   .= " Contao 3 ist toll!";
+        $message   .= " Contao 3 ist toll! ";
         $greetingEvent->setMessage($message);
     }
 }

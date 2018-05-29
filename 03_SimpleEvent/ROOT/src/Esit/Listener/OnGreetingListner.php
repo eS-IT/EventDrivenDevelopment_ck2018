@@ -7,7 +7,8 @@ class OnGreetingListner
     public function generateGreeting(\Esit\Events\OnGreetingEvent $greetingEvent)
     {
         $name       = $greetingEvent->getName();
-        $message    = "Hallo $name!";
+        $message    = $greetingEvent->getMessage();
+        $message   .= "Hallo $name!";
         $greetingEvent->setMessage($message);
     }
 }
