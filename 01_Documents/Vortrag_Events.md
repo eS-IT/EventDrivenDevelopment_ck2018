@@ -17,13 +17,13 @@ Durch die lose Kopplung der Komponenten steigt die Flexibilität. Es entsteht be
 
 ### Beispiele aus der Praxis
 
-__Universelle Import-/Exportmodule__
+__Universelle Import-/Exportmodule__  
 Da man nicht voraussetzen kann, dass es für alle Erweiterungen Contao-Models, oder Doctrine-Entities gibt, wird man hier auf SQL zurückgreifen müssen. Die Querys kann man sehr gut über Events erstellen. So kann leicht auf geänderte Rahmenbedingungen reagiert werden.
 
-__Frontend-Ansichten__
+__Frontend-Ansichten__  
 Für die Ausgabe im Frontend müssen oft Werte aus der DB konvertiert werden. Schreibt man allgemeingültige Module, weiß man natürlich im Vorfeld nicht, welche Daten damit angezeigt werden und wie die Daten konvertiert werden sollen. Stellt man nun ein entsprechendes Event zur Verfügung, kann der Nutzer hier bequem seine individuelle Konvertierung einfügen, indem er einfach seinen Listener registriert.
 
-__Berechnungen__
+__Berechnungen__  
 Auch Berechnungen für Bestellsysteme oder Konfiguratoren lassen sich hervorragend mit Events umsetzten. Zum einen können die einzelnen Bestandteile besser aufgeteilt werden, zum anderen kann auch nachträglich noch sehr einfach auf geänderte Brechungsgrundlagen reagiert werden.
 
 Es gibt sicher zahlreiche weitere Beispiele. Für diese Einführung soll diese aber erst einmal reichen.
