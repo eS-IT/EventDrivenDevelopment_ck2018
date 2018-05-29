@@ -455,33 +455,33 @@ _Damit dieses Beispiel funktioniert, müssen die Namespaces angepasst werden! Di
 
 ```txt
 ROOT/
-├── composer.json                                   <-- dice muss hier eingetagen werden
+├── composer.json                       <-- dice muss hier eingetagen werden
 └── system
-    └── modules
-        └── GreetingEvent                           <-- Root der Erweiterung
-            ├── Classes
-            │   ├── Contao
-            │   │   └── Elements
-            │   │       └── ContentGreeting.php     <-- Inhaltselement
-            │   ├── Events
-            │   │   └── OnGreetingEvent.php         <-- Event
-            │   ├── Helper
-            │   │   └── EventHelper.php             <-- EventDispatcher
-            │   └── Listener
-            │       └── OnGreetingListener.php      <-- Listener
-            │       └── OnGreetingListenerTwo.php   <-- 2. Listener
-            ├── config
-            │   ├── autoload.php                    <-- Autoload von Contao
-            │   ├── config.php                      <-- config.php von Contao
-            │   └── events.php                      <-- Konfiguration der Event Lsitener
-            ├── dca
-            │   └── tl_content.php                  <-- DCA-Konfiguration für Feld das den Namen aufnimmt
-            ├── languages
-            │   └── de
-            │       ├── default.php                 <-- Übersetzung des Inhaltselements
-            │       └── tl_content.php              <-- Übersetzung für das Feld das den Namen aufnimmt
-            └── templates
-                └── ce_greetings.html5              <-- Ausgabetemplate
+  └── modules
+    └── GreetingEvent                   <-- Root der Erweiterung
+      ├── Classes
+      │  ├── Contao
+      │  │  └── Elements
+      │  │    └── ContentGreeting.php   <-- Inhaltselement
+      │  ├── Events
+      │  │  └── OnGreetingEvent.php     <-- Event
+      │  ├── Helper
+      │  │  └── EventHelper.php         <-- EventDispatcher
+      │  └── Listener
+      │    └── OnGreetingListener.php   <-- Listener
+      │    └── OnGreetingListenerTwo.php<-- 2. Listener
+      ├── config
+      │  ├── autoload.php               <-- Autoload von Contao
+      │  ├── config.php                 <-- config.php von Contao
+      │  └── events.php                 <-- Konfiguration der Lsitener
+      ├── dca
+      │  └── tl_content.php             <-- DCA-Konfiguration
+      ├── languages
+      │  └── de
+      │    ├── default.php              <-- Übersetzung CTE
+      │    └── tl_content.php           <-- Übersetzung DCA
+      └── templates
+        └── ce_greetings.html5          <-- Ausgabetemplate
 ```
 
 Alle relevanten Dateien sind auch auf [Github](https://github.com/eS-IT/EventDrivenDevelopment_ck2018) zu finden. Sie liegen im Ordner `04_Contao3`. Dort kann alles nachvollzogen werden.
@@ -724,36 +724,35 @@ Hier ein Listing der Verzeichnisstruktur des Bundles:
 ```txt
 ROOT/
 └── src/
-    └── Vendor
-        └── Package
-            ├── Classes
-            │   ├── Contao
-            │   │   └── Elements
-            │   │       └── ContentGreeting.php         <-- Inhaltselement
-            │   ├── ContaoManager
-            │   │   └── ContaoManagerPlugin.php         <-- ManagerPlugin
-            │   ├── Events
-            │   │   └── OnGreetingEvent.php             <-- Event
-            │   └── Listener
-            │       ├── OnGreetingListener.php          <-- Listener
-            │       └── OnGreetingListenerTwo.php       <-- 2. Listener
-            ├── DependencyInjection
-            │   └── VendorPackageExtension.php          <-- Laden der Listener
-            ├── Resources
-            │   ├── config
-            │   │   └── listener.yml                    <-- Konfiguration der Event Lsitener
-            │   └── contao
-            │       ├── config
-            │       │   └── config.php                  <-- config.php von Contao
-            │       ├── dca
-            │       │   └── tl_content.php              <-- DCA-Konfiguration für Feld das den Namen aufnimmt
-            │       ├── languages
-            │       │   └── de
-            │       │       ├── default.php             <-- Übersetzung des Inhaltselements
-            │       │       └── tl_content.php          <-- Übersetzung für das Feld das den Namen aufnimmt
-            │       └── templates
-            │           └── ce_greetings.html5          <-- Ausgabetemplate
-            └── VendorPackageBundle.php                 <-- Somfony-Bundle-Datei
-```
+  └── Vendor
+    └── Package
+      ├── Classes
+      │    ├── Contao
+      │    │    └── Elements
+      │    │      └── ContentGreeting.php       <-- Inhaltselement
+      │    ├── ContaoManager
+      │    │    └── ContaoManagerPlugin.php     <-- ManagerPlugin
+      │    ├── Events
+      │    │    └── OnGreetingEvent.php         <-- Event
+      │    └── Listener
+      │      ├── OnGreetingListener.php         <-- Listener
+      │      └── OnGreetingListenerTwo.php      <-- 2. Listener
+      ├── DependencyInjection
+      │    └── VendorPackageExtension.php       <-- Laden der Listener
+      ├── Resources
+      │    ├── config
+      │    │    └── listener.yml                <-- Konfiguration: EventLsitener
+      │    └── contao
+      │      ├── config
+      │      │    └── config.php                <-- Contao: config.php
+      │      ├── dca
+      │      │    └── tl_content.php            <-- DCA
+      │      ├── languages
+      │      │    └── de
+      │      │      ├── default.php             <-- Übersetzung CTE
+      │      │      └── tl_content.php          <-- Übersetzung DCA
+      │      └── templates
+      │        └── ce_greetings.html5           <-- Ausgabetemplate
+      └── VendorPackageBundle.php               <-- Somfony-Bundle-Datei```
 
 Alle relevanten Dateien sind auch auf [Github](https://github.com/eS-IT/EventDrivenDevelopment_ck2018) zu finden. Sie liegen im Ordner `05_Contao4`. Dort kann alles nachvollzogen werden.

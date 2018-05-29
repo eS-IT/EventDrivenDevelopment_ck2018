@@ -1,28 +1,28 @@
 ROOT/
-├── composer.json                                   <-- dice muss hier eingetagen werden
+├── composer.json                       <-- dice muss hier eingetagen werden
 └── system
-    └── modules
-        └── GreetingEvent                           <-- Root der Erweiterung
-            ├── Classes
-            │   ├── Contao
-            │   │   └── Elements
-            │   │       └── ContentGreeting.php     <-- Inhaltselement
-            │   ├── Events
-            │   │   └── OnGreetingEvent.php         <-- Event
-            │   ├── Helper
-            │   │   └── EventHelper.php             <-- EventDispatcher
-            │   └── Listener
-            │       └── OnGreetingListener.php      <-- Listener
-            │       └── OnGreetingListenerTwo.php   <-- 2. Listener
-            ├── config
-            │   ├── autoload.php                    <-- Autoload von Contao
-            │   ├── config.php                      <-- config.php von Contao
-            │   └── events.php                      <-- Konfiguration der Event Lsitener
-            ├── dca
-            │   └── tl_content.php                  <-- DCA-Konfiguration für Feld das den Namen aufnimmt
-            ├── languages
-            │   └── de
-            │       ├── default.php                 <-- Übersetzung des Inhaltselements
-            │       └── tl_content.php              <-- Übersetzung für das Feld das den Namen aufnimmt
-            └── templates
-                └── ce_greetings.html5              <-- Ausgabetemplate
+  └── modules
+    └── GreetingEvent                   <-- Root der Erweiterung
+      ├── Classes
+      │  ├── Contao
+      │  │  └── Elements
+      │  │    └── ContentGreeting.php   <-- Inhaltselement
+      │  ├── Events
+      │  │  └── OnGreetingEvent.php     <-- Event
+      │  ├── Helper
+      │  │  └── EventHelper.php         <-- EventDispatcher
+      │  └── Listener
+      │    └── OnGreetingListener.php   <-- Listener
+      │    └── OnGreetingListenerTwo.php<-- 2. Listener
+      ├── config
+      │  ├── autoload.php               <-- Autoload von Contao
+      │  ├── config.php                 <-- config.php von Contao
+      │  └── events.php                 <-- Konfiguration der Lsitener
+      ├── dca
+      │  └── tl_content.php             <-- DCA-Konfiguration
+      ├── languages
+      │  └── de
+      │    ├── default.php              <-- Übersetzung CTE
+      │    └── tl_content.php           <-- Übersetzung DCA
+      └── templates
+        └── ce_greetings.html5          <-- Ausgabetemplate
