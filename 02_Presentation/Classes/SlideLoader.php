@@ -22,7 +22,7 @@ class SlideLoader
     public static function loadSlides()
     {
         $path       = str_replace('Classes', 'Slides', __DIR__);
-        $files      = glob($path . '/*/*.md');
+        $files      = glob($path . '/*.md');
         $content    = '';
 
         foreach ($files as $file) {

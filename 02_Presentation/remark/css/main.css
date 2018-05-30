@@ -4,7 +4,7 @@
 
 body {
     color: #555555;
-    font-family: 'Droid Serif';
+    font-family: 'Droid Serif', sans-serif;
     font-size: 100%;
 }
 
@@ -16,12 +16,13 @@ body {
 .remark-slide-content h2,
 .remark-slide-content h3 {
     color: rgb(40,83,125);
-    font-family: 'Yanone Kaffeesatz';
+    font-family: 'Yanone Kaffeesatz', serif;
     font-weight: normal;
 }
 
 .remark-code, .remark-inline-code {
-    font-family: 'Ubuntu Mono';
+    font-family: 'Ubuntu Mono', Monaco, monospace;
+    max-height: 400px;
 }
 
 .remark-slide-content:after {

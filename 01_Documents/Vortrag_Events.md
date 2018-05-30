@@ -658,7 +658,8 @@ class OnGreetingListener
     public function generateGreeting(OnGreetingEvent $greetingEvent)
     {
         $name       = $greetingEvent->getName();
-        $message    = "Hallo $name!";
+        $message    = $greetingEvent->getMessage();
+        $message   .= "Hallo $name!";
         $greetingEvent->setMessage($message);
     }
 }
@@ -678,7 +679,7 @@ class OnGreetingListenerTwo
     public function generateMessage(OnGreetingEvent $greetingEvent)
     {
         $message    = $greetingEvent->getMessage();
-        $message   .= " Contao 4 ist toll!";
+        $message   .= " Contao 4 ist toll! ";
         $greetingEvent->setMessage($message);
     }
 }
@@ -753,6 +754,7 @@ ROOT/
       │      │      └── tl_content.php          <-- Übersetzung DCA
       │      └── templates
       │        └── ce_greetings.html5           <-- Ausgabetemplate
-      └── VendorPackageBundle.php               <-- Somfony-Bundle-Datei```
+      └── VendorPackageBundle.php               <-- Somfony-Bundle-Datei
+```
 
 Alle relevanten Dateien sind auch auf [Github](https://github.com/eS-IT/EventDrivenDevelopment_ck2018) zu finden. Sie liegen im Ordner `05_Contao4`. Dort kann alles nachvollzogen werden.

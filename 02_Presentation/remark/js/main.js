@@ -8,4 +8,8 @@
  * @since       25.04.18 - 16:20
  */
 
-var slideshow = remark.create();
+var slideshow = remark.create({
+    navigation: {
+        scroll: false
+    }
+});
