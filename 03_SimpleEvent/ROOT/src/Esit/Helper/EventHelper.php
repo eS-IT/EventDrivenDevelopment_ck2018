@@ -1,5 +1,5 @@
 <?php
-# 03_SimpleEvent/ROOT/src/Helper/EventHelper.php
+# 03_SimpleEvent/ROOT/src/Esit/Helper/EventHelper.php
 namespace Esit\Helper;
 
 class EventHelper

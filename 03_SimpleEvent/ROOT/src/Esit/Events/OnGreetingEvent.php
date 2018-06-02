@@ -1,5 +1,5 @@
 <?php
-# 03_SimpleEvent/ROOT/src/Events/OnGreetingEvent.php
+# 03_SimpleEvent/ROOT/src/Esit/Events/OnGreetingEvent.php
 namespace Esit\Events;
 
 class OnGreetingEvent

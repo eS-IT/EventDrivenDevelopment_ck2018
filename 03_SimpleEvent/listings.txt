@@ -1,14 +1,15 @@
 ROOT/
-├── composer.json                       <-- dice muss hier eingetragen werden
+├── composer.json                           <-- dice muss hier eingetragen werden
 ├── config
-│   └── events.php                      <-- Konfiguration der Event Lsitener
+│   └── events.php                          <-- Konfiguration der Event Lsitener
 └── src
-    ├── Content
-    │   └── EventCaller.php             <-- Aufrufende Klasse (beispielhaft)
-    ├── Events
-    │   └── OnGreetingEvent.php         <-- Event
-    ├── Helper
-    │   └── EventHelper.php             <-- Event Dispatcher
-    └── Listener
-        ├── OnGreetingListner.php       <-- 1. Event Listener
-        └── OnGreetingListnerTwo.php    <-- 2. Event Listener
+    └── Esit
+        ├── Content
+        │   └── EventCaller.php             <-- Aufrufende Klasse (beispielhaft)
+        ├── Events
+        │   └── OnGreetingEvent.php         <-- Event
+        ├── Helper
+        │   └── EventHelper.php             <-- Event Dispatcher
+        └── Listener
+            ├── OnGreetingListner.php       <-- 1. Event Listener
+            └── OnGreetingListnerTwo.php    <-- 2. Event Listener
