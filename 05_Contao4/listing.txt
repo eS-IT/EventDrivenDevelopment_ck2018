@@ -17,7 +17,7 @@ ROOT/
       │    └── VendorPackageExtension.php       <-- Laden der Listener
       ├── Resources
       │    ├── config
-      │    │    └── listener.yml                <-- Konfiguration: EventLsitener
+      │    │    └── listener.yml                <-- Konfiguration: EventListener
       │    └── contao
       │      ├── config
       │      │    └── config.php                <-- Contao: config.php

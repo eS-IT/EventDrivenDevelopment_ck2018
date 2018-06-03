@@ -1,7 +1,7 @@
 ROOT/
 ├── composer.json                           <-- dice muss hier eingetragen werden
 ├── config
-│   └── events.php                          <-- Konfiguration der Event Lsitener
+│   └── events.php                          <-- Konfiguration der Event Listener
 └── src
     └── Esit
         ├── Content

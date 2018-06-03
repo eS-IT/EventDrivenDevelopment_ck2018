@@ -183,7 +183,7 @@ class EventHelper
 ```
 
 ### Definition eines Events
-Mit diesem Event wird eine Grußbotschaft erstellt. Beim Erstellen wird ihm ein Name übergeben und der Listener erstellt dann die Grußbotschaft. Es gibt zwei Eigenschaften: `name` für den Namen und `message` für die Grußbotschaft. Zusätzlich wird noch eine Konstante definiert (`EVENTNAME`). Hierbei handelt es sich um den Namen, mit dem das Event aufgerufen wird. Wichtig ist, dass der __Name einzigartig sein muss__!
+Mit diesem Event wird eine Grußbotschaft erstellt. Beim Erstellen wird ihm ein Name übergeben und der Listener erstellt dann die Grußbotschaft. Es gibt zwei Eigenschaften: `name` für den Namen und `message` für die Grußbotschaft. Zusätzlich wird noch eine Konstante definiert (`NAME`). Hierbei handelt es sich um den Namen, mit dem das Event aufgerufen wird. Wichtig ist, dass der __Name einzigartig sein muss__!
 
 ```php
 <?php
@@ -312,7 +312,7 @@ Zur Verdeutlichung der Vorgänge hier noch einmal die komplette Verzeichnisstruk
 ROOT/
 ├── composer.json                           <-- dice muss hier eingetragen werden
 ├── config
-│   └── events.php                          <-- Konfiguration der Event Lsitener
+│   └── events.php                          <-- Konfiguration der Event Listener
 └── src
     └── Esit
         ├── Content
@@ -419,6 +419,7 @@ Quelle: [e@sy Solutions IT - Blog](http://easysolutions-it.de/artikel/contao-cal
 ### EventHelper
 Es spricht nichts dagegen, das eben gezeigt Vorgehen mit der Klasse `\Esit\Helper\EventHelper` unter Contao 3 einzusetzen. Ich habe eine ähnliche Klasse bereits im Einsatz, es funktioniert sehr gut. Die Klasse mit dem Aufruf (`\Esit\Content\EventCaller`) könnte dann z.B. die Klasse eines Inhaltselements oder Module sein.
 
+### Aufruf
 Hier ein Beispiel für den Aufruf des oben definierten Events in einem normalen Inhaltselement:
 
 ```php
@@ -473,7 +474,7 @@ ROOT/
       ├── config
       │  ├── autoload.php               <-- Autoload von Contao
       │  ├── config.php                 <-- config.php von Contao
-      │  └── events.php                 <-- Konfiguration der Lsitener
+      │  └── events.php                 <-- Konfiguration der Listener
       ├── dca
       │  └── tl_content.php             <-- DCA-Konfiguration
       ├── languages
@@ -508,7 +509,7 @@ Nun können wir unser Bundle für den Manager konfigurieren. Wichtig ist, dass d
 
 ```php
 <?php
-// 05_Contao4/ROOT/src/Vendor/Package/Classes/ContaoManager/ContaoManagerPlugin.php
+# 05_Contao4/ROOT/src/Vendor/Package/Classes/ContaoManager/ContaoManagerPlugin.php
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
@@ -546,8 +547,7 @@ class VendorPackageBundle extends Bundle
 Für das Laden der Konfigurationen wird eine Extenstion-Datei benötigt. Diese wird vom `\Symfony\Component\DependencyInjection\Compiler\MergeExtensionConfigurationPass` beim Laden der ServiceContainer aufgerufen. Die Datei muss im Ordner `DependencyInjection` des Bundles liegen und nach dem Schema `VENDORNAMESPACE``BUNDLENAME``Extension` benannt sein. In unserem Beispiel ist dies `VendorPackageExtension`. Außerdem muss die Klasse von der Klasse `Symfony\Component\DependencyInjection\Extension\Extension` erben. Es können hier auch Werte im Container gespeichert werden. Diese sind ähnlich den Werten, die Contao in `$GLOBALS` speichert.
 
 ```php
-<?php
-// 05_Contao4/ROOT/src/Vendor/Package/DependencyInjection/VendorPackageExtension.php
+# 05_Contao4/ROOT/src/Vendor/Package/DependencyInjection/VendorPackageExtension.php
 namespace Vendor\Package\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
@@ -742,7 +742,7 @@ ROOT/
       │    └── VendorPackageExtension.php       <-- Laden der Listener
       ├── Resources
       │    ├── config
-      │    │    └── listener.yml                <-- Konfiguration: EventLsitener
+      │    │    └── listener.yml                <-- Konfiguration: EventListener
       │    └── contao
       │      ├── config
       │      │    └── config.php                <-- Contao: config.php

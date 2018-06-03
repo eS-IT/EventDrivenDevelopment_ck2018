@@ -1,5 +1,4 @@
-<?php
-// 05_Contao4/ROOT/src/Vendor/Package/DependencyInjection/VendorPackageExtension.php
+# 05_Contao4/ROOT/src/Vendor/Package/DependencyInjection/VendorPackageExtension.php
 namespace Vendor\Package\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
