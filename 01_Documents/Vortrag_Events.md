@@ -144,7 +144,7 @@ Als erstes kümmern wir uns um die Konfiguration. In der Datei `ROOT/config/even
  * Im Projekt wird nur die Datei 03_SimpleEvent/ROOT/config/events.php verwendet!
  * (s. "Einfügen eines weiteren Listeners" weiter unten)
  */
-$events['greeting.event'][1024] = ['Esit\Listener\OnGreetingListner', 'generateGreeting'];
+$events['greeting.event'][1024] = ['Esit\Listener\OnGreetingListener', 'generateGreeting'];
 
 return $events;
 ```
@@ -154,7 +154,7 @@ Hier wird ein sehr einfacher Event Dispatcher gezeigt. Es wird an dieser Stelle 
 
 ```php
 <?php
-# 03_SimpleEvent/ROOT/src/Helper/EventHelper.php
+# 03_SimpleEvent/ROOT/src/Esit/Helper/EventHelper.php
 namespace Esit\Helper;
 
 class EventHelper
@@ -187,7 +187,7 @@ Mit diesem Event wird eine Grußbotschaft erstellt. Beim Erstellen wird ihm ein 
 
 ```php
 <?php
-# 03_SimpleEvent/ROOT/src/Events/OnGreetingEvent.php
+# 03_SimpleEvent/ROOT/src/Esit/Events/OnGreetingEvent.php
 namespace Esit\Events;
 
 class OnGreetingEvent
@@ -236,10 +236,10 @@ Die Verarbeitung ist sehr einfach, es wird einfach der Methode das Event überge
 
 ```php
 <?php
-# 03_SimpleEvent/ROOT/src/Listener/OnGreetingListner.php
+# 03_SimpleEvent/ROOT/src/Esit/Listener/OnGreetingListener.php
 namespace Esit\Listener;
 
-class OnGreetingListner
+class OnGreetingListener
 {
     public function generateGreeting(\Esit\Events\OnGreetingEvent $greetingEvent)
     {
@@ -256,7 +256,7 @@ Will man nun ein Event aufrufen, benötigt man das Event und den Event Dispatche
 
 ```php
 <?php
-# 03_SimpleEvent/ROOT/src/Content/EventCaller.php
+# 03_SimpleEvent/ROOT/src/Esit/Content/EventCaller.php
 namespace Esit\Content;
 
 class EventCaller
@@ -277,8 +277,8 @@ Wollen wir der Grußbotschaft nun z.B. später noch etwas hinzufügen, registrie
 ```php
 <?php
 # 03_SimpleEvent/ROOT/config/events.php
-$events['greeting.event'][1024] = ['Esit\Listener\OnGreetingListner', 'generateGreeting'];
-$events['greeting.event'][2048] = ['Esit\Listener\OnGreetingListnerTwo', 'modifyGreeting']; # new!
+$events['greeting.event'][1024] = ['Esit\Listener\OnGreetingListener', 'generateGreeting'];
+$events['greeting.event'][2048] = ['Esit\Listener\OnGreetingListenerTwo', 'modifyGreeting']; # new!
 
 return $events;
 ```
@@ -287,10 +287,10 @@ Nun erstellen wir den neuen Listener und führen die gewünschten Operationen du
 
 ```php
 <?php
-# 03_SimpleEvent/ROOT/src/Listener/OnGreetingListnerTwo.php
+# 03_SimpleEvent/ROOT/src/Esit/Listener/OnGreetingListenerTwo.php
 namespace Esit\Listener;
 
-class OnGreetingListnerTwo
+class OnGreetingListenerTwo
 {
     public function modifyGreeting(\Esit\Events\OnGreetingEvent $greetingEvent)
     {
@@ -310,20 +310,20 @@ Zur Verdeutlichung der Vorgänge hier noch einmal die komplette Verzeichnisstruk
 
 ```txt
 ROOT/
-├── composer.json                       <-- dice muss hier eingetragen werden
+├── composer.json                           <-- dice muss hier eingetragen werden
 ├── config
-│   └── events.php                      <-- Konfiguration der Event Lsitener
+│   └── events.php                          <-- Konfiguration der Event Lsitener
 └── src
-    ├── Content
-    │   └── EventCaller.php             <-- Aufrufende Klasse (beispielhaft)
-    ├── Events
-    │   └── OnGreetingEvent.php         <-- Event
-    ├── Helper
-    │   └── EventHelper.php             <-- Event Dispatcher
-    └── Listener
-        ├── OnGreetingListner.php       <-- 1. Event Listener
-        └── OnGreetingListnerTwo.php    <-- 2. Event Listener
-```
+    └── Esit
+        ├── Content
+        │   └── EventCaller.php             <-- Aufrufende Klasse (beispielhaft)
+        ├── Events
+        │   └── OnGreetingEvent.php         <-- Event
+        ├── Helper
+        │   └── EventHelper.php             <-- Event Dispatcher
+        └── Listener
+            ├── OnGreetingListener.php      <-- 1. Event Listener
+            └── OnGreetingListenerTwo.php   <-- 2. Event Listener```
 
 Alle relevanten Dateien sind auch auf [Github](https://github.com/eS-IT/EventDrivenDevelopment_ck2018) zu finden.  Sie liegen im Ordner `03_SimpleEvent`. Dort kann alles nachvollzogen werden.
 
@@ -353,7 +353,7 @@ Der Listener wäre in diesem Fall die Klasse `MyHook`. Sie könnte z.B. so ausse
 
 ```php
 <?php
-# 04_Contao3/ROOT/system/moduel/ERWEITERUNG/src/MyHook.php
+# 04_Contao3/ROOT/system/moduel/GreetingEvent/src/MyHook.php
 namespace Esit\GreetingEvent\Classes\Contao\Hooks;
 
 class MyHook

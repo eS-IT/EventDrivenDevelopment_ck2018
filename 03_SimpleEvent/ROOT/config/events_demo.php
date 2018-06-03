@@ -5,6 +5,6 @@
  * Im Projekt wird nur die Datei 03_SimpleEvent/ROOT/config/events.php verwendet!
  * (s. "Einfügen eines weiteren Listeners" weiter unten)
  */
-$events['greeting.event'][1024] = ['Esit\Listener\OnGreetingListner', 'generateGreeting'];
+$events['greeting.event'][1024] = ['Esit\Listener\OnGreetingListener', 'generateGreeting'];
 
 return $events;

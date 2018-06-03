@@ -1,5 +1,5 @@
 <?php
-# 04_Contao3/ROOT/system/moduel/ERWEITERUNG/src/MyHook.php
+# 04_Contao3/ROOT/system/moduel/GreetingEvent/src/MyHook.php
 namespace Esit\GreetingEvent\Classes\Contao\Hooks;
 
 class MyHook
