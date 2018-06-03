@@ -456,7 +456,7 @@ _Damit dieses Beispiel funktioniert, müssen die Namespaces angepasst werden! Di
 
 ```txt
 ROOT/
-├── composer.json                       <-- dice muss hier eingetagen werden
+├── composer.json                       <-- dice muss hier eingetragen werden
 └── system
   └── modules
     └── GreetingEvent                   <-- Root der Erweiterung
