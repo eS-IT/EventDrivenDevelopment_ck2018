@@ -278,7 +278,7 @@ Wollen wir der Grußbotschaft nun z.B. später noch etwas hinzufügen, registrie
 <?php
 # 03_SimpleEvent/ROOT/config/events.php
 $events['greeting.event'][1024] = ['Esit\Listener\OnGreetingListener', 'generateGreeting'];
-$events['greeting.event'][2048] = ['Esit\Listener\OnGreetingListenerTwo', 'modifyGreeting']; # new!
+$events['greeting.event'][512] = ['Esit\Listener\OnGreetingListenerTwo', 'modifyGreeting']; # new!
 
 return $events;
 ```
@@ -685,7 +685,7 @@ class OnGreetingListenerTwo
 }
 ```
 
-### Aufurf
+### Aufruf
 Um nun ein Event aufrufen zu können, benötigt man einen EventDispatcher. Dieser kann über die System-Klasse von Contao mit `\System::getContainer()->get('event_dispatcher')` bezogen werden. Dann wird wie immer eine Instanz des Events erstellt, mit Daten befüllt und ausgelöst.
 
 ```php
